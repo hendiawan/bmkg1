@@ -1,0 +1,10 @@
+<ifModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /clean_urls/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php/$1
+
+</ifModule>
